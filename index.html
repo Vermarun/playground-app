@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/playground-app/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/playground-app/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0b0f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Playground" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>LLM Playground</title>
+    <script>
+      // Before first paint, so a dark-theme page never flashes white.
+      (function () {
+        var chosen = 'system'
+        try { chosen = localStorage.getItem('lp-theme') || 'system' } catch (e) {}
+        var dark = chosen === 'dark' || (chosen === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.classList.toggle('dark', dark)
+      })()
+    </script>
+    <script type="module" crossorigin src="/playground-app/assets/index-BsyQI4td.js"></script>
+    <link rel="modulepreload" crossorigin href="/playground-app/assets/rolldown-runtime-Dd_uD5pT.js">
+    <link rel="modulepreload" crossorigin href="/playground-app/assets/react-dom-AURqkMeZ.js">
+    <link rel="modulepreload" crossorigin href="/playground-app/assets/button-DNuadDjX.js">
+    <link rel="modulepreload" crossorigin href="/playground-app/assets/preload-helper-D6AMml3h.js">
+    <link rel="modulepreload" crossorigin href="/playground-app/assets/check-CHXUjfJf.js">
+    <link rel="modulepreload" crossorigin href="/playground-app/assets/dist-BtwIYFvw.js">
+    <link rel="modulepreload" crossorigin href="/playground-app/assets/profiles-DQb4Z_Z_.js">
+    <link rel="modulepreload" crossorigin href="/playground-app/assets/db-BF7VE8rE.js">
+    <link rel="stylesheet" crossorigin href="/playground-app/assets/index-CPthXIqv.css">
+  <link rel="manifest" href="/playground-app/manifest.webmanifest"></head>
+  <body>
+    <div id="root">
+      <!-- Replaced the moment the app draws. If this text is still here, the
+           app itself failed to start — which is worth saying, because a blank
+           white screen says nothing at all. -->
+      <div id="boot" style="font: 15px/1.5 system-ui, sans-serif; padding: 24px; color: #6b7280">
+        Starting…
+        <noscript>This app needs JavaScript.</noscript>
+      </div>
+    </div>
+  </body>
+</html>
